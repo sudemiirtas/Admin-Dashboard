@@ -89,23 +89,77 @@
                     </label>
                 </div>
                 <!-- userImg -->
-                <div class="user"></div>
-                <img src="user.jpg">
+                <div class="user">
+                    <img src="user.jpg">
+                </div>
+            </div>
+            <!-- Cards -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Sales </div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon></div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Comment</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
+                </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">$7.842</div>
+                        <div class="cardName">Earing</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>   
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
 
     <script>
+        // MenuToggle 
+        let toggle=document.querySelector('.toggle');
+        let navigation=document.querySelector('.navigation');
+        let main=document.querySelector('.main');
+
+        toggle.onclick=function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+        }
+
         //add hovered class in selected list item
         let list =document.querySelectorAll('.navigation li');
         function activeLink (){
-            list.fortach((item)=> 
+            list.forEach((item) =>
             item.classList.remove('hovered'));
             this.classList.add('hovered');
-        }
+     }       
         list.forEach((item)=> 
         item.addEventListener('mouseover',activeLink));
     </script>
